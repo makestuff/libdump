@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include <stdio.h>
-#include "dump.h"
+#include "libdump.h"
 
 void dump(unsigned int address, const unsigned char *input, unsigned int length) {
 	char ch;
@@ -44,7 +44,6 @@ void dump(unsigned int address, const unsigned char *input, unsigned int length)
 			}
 			printf("\n");
 		}
-		printf("\n");
 	}
 }
 
