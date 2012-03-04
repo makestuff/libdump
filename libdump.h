@@ -14,8 +14,8 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-#ifndef DUMP_H
-#define DUMP_H
+#ifndef LIBDUMP_H
+#define LIBDUMP_H
 
 #include <stddef.h>
 
