@@ -18,7 +18,7 @@
 #include "libdump.h"
 
 void dump(unsigned int address, const unsigned char *input, unsigned int length) {
-	char ch;
+	unsigned char ch;
 	char x;
 	const unsigned char *p;
 
@@ -30,7 +30,7 @@ void dump(unsigned int address, const unsigned char *input, unsigned int length)
 			printf("%08X ", address);
 			do {
 				ch = *input++;
-				printf("%02X ", (unsigned char)ch);
+				printf("%02X ", ch);
 				--length;
 				x++;
 				address++;
