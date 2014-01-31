@@ -15,12 +15,13 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include <stdio.h>
+#include <makestuff.h>
 #include "libdump.h"
 
-void dump(unsigned int address, const unsigned char *input, unsigned int length) {
-	unsigned char ch;
+void dump(uint32 address, const uint8 *input, uint32 length) {
+	uint8 ch;
 	char x;
-	const unsigned char *p;
+	const uint8 *p;
 
 	if ( length ) {
 		printf("         00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F\n");
@@ -47,7 +48,7 @@ void dump(unsigned int address, const unsigned char *input, unsigned int length)
 	}
 }
 
-void dumpSimple(const unsigned char *input, unsigned int length) {
+void dumpSimple(const uint8 *input, uint32 length) {
 	while ( length ) {
 		printf(" %02X", *input++);
 		--length;

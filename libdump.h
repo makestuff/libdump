@@ -18,12 +18,13 @@
 #define LIBDUMP_H
 
 #include <stddef.h>
+#include <makestuff.h>
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-	void dump(unsigned int address, const unsigned char *input, unsigned int length);
-	void dumpSimple(const unsigned char *input, unsigned int length);
+	void dump(uint32 address, const uint8 *input, uint32 length);
+	void dumpSimple(const uint8 *input, uint32 length);
 #ifdef __cplusplus
 }
 #endif
