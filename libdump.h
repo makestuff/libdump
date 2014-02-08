@@ -23,8 +23,8 @@
 #ifdef __cplusplus
 extern "C" {
 #endif
-	void dump(uint32 address, const uint8 *input, uint32 length);
-	void dumpSimple(const uint8 *input, uint32 length);
+	void dump(size_t address, const uint8 *input, size_t length);
+	void dumpSimple(const uint8 *input, size_t length);
 #ifdef __cplusplus
 }
 #endif
