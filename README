@@ -1,1 +1,1 @@
-A couple of routines for dumping binary data as hex.
+A couple of simple functions for dumping (i.e printing) binary data as hex.
