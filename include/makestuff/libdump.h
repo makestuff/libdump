@@ -18,7 +18,7 @@
 #define LIBDUMP_H
 
 #include <stddef.h>
-#include <makestuff.h>
+#include <makestuff/common.h>
 
 #ifdef __cplusplus
 extern "C" {

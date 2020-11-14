@@ -15,8 +15,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include <stdio.h>
-#include <makestuff.h>
-#include "libdump.h"
+#include <makestuff/common.h>
+#include <makestuff/libdump.h>
 
 static void printAddr16(size_t address) {
 	printf("%04X ", (uint32)address);
@@ -24,9 +24,11 @@ static void printAddr16(size_t address) {
 static void printAddr32(size_t address) {
 	printf("%08X ", (uint32)address);
 }
-static void printAddr64(size_t address) {
-	printf(PFSZH" ", address);
-}
+#if WORD_LENGTH == 64
+	static void printAddr64(size_t address) {
+		printf(PFSZH" ", address);
+	}
+#endif
 typedef void (*FuncPtr)(size_t address);
 
 void dump(size_t address, const uint8 *input, size_t length) {
